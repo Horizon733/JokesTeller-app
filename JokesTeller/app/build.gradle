@@ -32,8 +32,8 @@ android {
     }
 
     flavorDimensions "version"
-    productFlavors{
-        free{
+    productFlavors {
+        free {
             dimension "version"
             applicationIdSuffix ".free"
             applicationId 'com.example.jokesteller.free'
@@ -64,7 +64,6 @@ dependencies {
     endpointsServer project(path: ':backend', configuration: 'endpoints')
     implementation project(path: ':jokeslib')
     testImplementation 'junit:junit:4.12'
-    implementation 'com.google.android.gms:play-services-ads:19.1.0'
     implementation 'com.google.api-client:google-api-client:1.30.9'
     implementation 'com.google.http-client:google-http-client-android:1.35.0'
     implementation 'com.google.code.findbugs:jsr305:3.0.2'

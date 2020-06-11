@@ -1,18 +1,12 @@
 package com.example.jokesteller;
 
-import android.content.Context;
-
-import androidx.test.espresso.internal.inject.InstrumentationContext;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
-import androidx.test.platform.app.InstrumentationRegistry;
 
-
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.util.concurrent.ExecutionException;
-
-import static junit.framework.TestCase.assertNotNull;
 
 @RunWith(AndroidJUnit4.class)
 public class AsyncTest {
@@ -24,8 +18,8 @@ public class AsyncTest {
 
             }
         });
-    endpointsAsyncTask.execute();
-    String joke = endpointsAsyncTask.get();
-        assertNotNull(joke);
+        endpointsAsyncTask.execute();
+        String joke = endpointsAsyncTask.get();
+        Assert.assertNotEquals("", joke);
     }
 }
