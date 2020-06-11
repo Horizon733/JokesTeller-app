@@ -26,12 +26,18 @@ sourceCompatibility = JavaVersion.VERSION_1_7
 targetCompatibility = JavaVersion.VERSION_1_7
 
 dependencies {
-    implementation 'com.google.endpoints:endpoints-framework:2.0.10'
+    implementation 'com.google.endpoints:endpoints-framework:2.2.1'
     implementation 'javax.inject:javax.inject:1'
 
     implementation 'javax.servlet:servlet-api:2.5'
-    implementation 'com.google.api-client:google-api-client:1.23.0'
-    implementation 'com.google.http-client:google-http-client-android:1.23.0'
-    //implementation project(":jokeslib")
+    implementation 'com.google.api-client:google-api-client:1.30.9'
+    implementation 'com.google.http-client:google-http-client-android:1.35.0'
+    implementation project(path: ':jokeslib')
+}
+appengine{
 
+
+    run {
+        port = 8888
+    }
 }

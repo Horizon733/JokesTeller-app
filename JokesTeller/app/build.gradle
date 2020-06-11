@@ -36,11 +36,23 @@ android {
         free{
             dimension "version"
             applicationIdSuffix ".free"
+            applicationId 'com.example.jokesteller.free'
         }
         paid {
             dimension "version"
             applicationIdSuffix ".paid"
+            applicationId 'com.example.jokesteller.paid'
         }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
     }
 }
 
@@ -51,10 +63,10 @@ dependencies {
     implementation project(path: ':jokedisplaylib')
     endpointsServer project(path: ':backend', configuration: 'endpoints')
     implementation project(path: ':jokeslib')
-    testImplementation 'junit:junit:4.13'
+    testImplementation 'junit:junit:4.12'
     implementation 'com.google.android.gms:play-services-ads:19.1.0'
-    implementation 'com.google.api-client:google-api-client:1.23.0'
-    implementation 'com.google.http-client:google-http-client-android:1.23.0'
+    implementation 'com.google.api-client:google-api-client:1.30.9'
+    implementation 'com.google.http-client:google-http-client-android:1.35.0'
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
