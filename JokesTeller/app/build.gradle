@@ -62,7 +62,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation project(path: ':jokedisplaylib')
     endpointsServer project(path: ':backend', configuration: 'endpoints')
-    implementation project(path: ':jokeslib')
     testImplementation 'junit:junit:4.12'
     implementation 'com.google.api-client:google-api-client:1.30.9'
     implementation 'com.google.http-client:google-http-client-android:1.35.0'

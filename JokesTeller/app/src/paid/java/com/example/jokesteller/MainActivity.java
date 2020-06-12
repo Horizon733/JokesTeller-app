@@ -11,9 +11,6 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.jokedisplaylib.JokeDisplayActivity;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 
 
 public class MainActivity extends AppCompatActivity implements EndpointsAsyncTask.SendJokes {

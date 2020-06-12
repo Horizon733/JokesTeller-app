@@ -4,6 +4,7 @@ package com.example.jokesteller;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -59,7 +60,8 @@ class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
         try {
             return myApiService.getJokes().execute().getData();
         } catch (IOException e) {
-            return e.getMessage();
+            Log.e("Async Task",e.getMessage());
+            return "";
         }
     }
 
